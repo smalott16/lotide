@@ -9,7 +9,7 @@ const eqArrays = function(array1, array2) {
     if (array1[i] !== array2[i]) {
       areEqual = false;
     }
-  };
+  }
   return areEqual;
 };
 
@@ -24,20 +24,20 @@ const assertArraysEqual = function(array1, array2) {
 const without = function(source, itemsToRemove) {
   //initilize new array to return
   let modified = [];
+  //console.log(source);
   for (let i = 0; i < source.length; i++) {
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] !== itemsToRemove[j]) {
-        modified.push(source[i])
-      }
+    if (!itemsToRemove.includes(source[i])) {
+      modified.push(source[i]);
     }
   }
   return modified;
 };
 
-
 //Test Code
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-console.log(words);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
