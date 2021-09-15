@@ -21,10 +21,23 @@ const countLetters = function(words) {
       }
     }
   }
-  console.log(lettersObj);
+  //console.log(lettersObj);
+  return lettersObj;
 };
 
 //Test Code
-countLetters("66");
-countLetters("Spencer Malott");
-countLetters("lighthouse in the house");
+// countLetters("66");
+// countLetters("Spencer Malott");
+// countLetters("lighthouse in the house");
+
+// //Test the assert equals
+// const test1 = countLetters("lighthouse in the house");
+// assertEqual(test1["l"], 1);
+// assertEqual(test1["i"], 2);
+// assertEqual(test1["g"], 1);
+// assertEqual(test1["h"], 4);
+// assertEqual(test1["o"], 2);
+// assertEqual(test1["s"], 2);
+// assertEqual(test1["e"], 3);
+// assertEqual(test1["n"], 1);
+// assertEqual(test1["t"], 2);
