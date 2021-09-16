@@ -23,19 +23,13 @@ const eqArrays = function(array1, array2) {
   return areEqual;
 };
 
-const eqObjects = function(object1, object2) {
-  // console.log("check length 1:", Object.keys(object1).length);
-  // console.log("check length 2:", Object.keys(object2).length);
-  
-  //if arrays are different length return false
-  //console.log("length", Object.keys(object1).length, Object.keys(object2).length)
+const eqObjects = function(object1, object2) {  
   if(Object.keys(object1).length !== Object.keys(object2).length) {
     console.log("length")
     return false;
   }
-
   //assuming the above conditions passes and they are the same length, check the key values
-  for (let key of Object.keys(object1)){
+  for (let key of Object.keys(object1)) {
     //console.log("check", object1[key], object2[key])
     //console.log(Array.isArray(object1[key]));
 
@@ -43,11 +37,11 @@ const eqObjects = function(object1, object2) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       //conditional for arrays
       if (!eqArrays(object1[key], object2[key])) {
-        console.log("here")
+        console.log("here");
         return false;
       }
     } else if (object1[key] !== object2[key]) {
-      console.log("there")
+      console.log("there");
       return false;
     }
   }
