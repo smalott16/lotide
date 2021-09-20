@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@spencer_malott/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide, a dumbed-down version of lodash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/smalott16/lotide.git"
   },
-  "author": "",
+  "author": "Spencer Malott",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/smalott16/lotide/issues"
