@@ -40,6 +40,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 //Test Code
 
 //console.log(letterPositions("lighthouse in the house"));

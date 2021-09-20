@@ -25,6 +25,8 @@ const countLetters = function(words) {
   return lettersObj;
 };
 
+module.exports = countLetters;
+
 //Test Code
 // countLetters("66");
 // countLetters("Spencer Malott");

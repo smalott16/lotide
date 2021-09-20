@@ -18,6 +18,8 @@ const findKey = function(obj, callBack) {
   return keyMatch;
 };
 
+module.exports = findKey;
+
 //TEST CODE
 // const result1 = findKey({
 //   "Blue Hill": { stars: 1 },
