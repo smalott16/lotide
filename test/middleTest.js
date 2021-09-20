@@ -1,17 +1,32 @@
-const assertArraysEqual = require('../assertArraysEqual')
 const middle = require('../middle');
 
-//Test Cases
-console.log(middle([1]));
-console.log(middle([1,2]));
-console.log(middle([1,2,3]));
-console.log(middle(["Joe", "George", "Mike", "Amahd"]));
-console.log(middle([1,2,3,99]));
-console.log(middle([1,2,3,4,5,6,7,8,9]));
-assertArraysEqual(["George", "Mike"], middle((["Joe", "George", "Mike", "Amahd"])));
-assertArraysEqual(["George", "Mike"], middle((["Joe", "George", "Mike"])));
+const assert = require('chai').assert;
 
-//Check if array changes after running the middle
-const testArray = ["Joe", "George", "Mike", "Amahd"];
-console.log(middle(testArray));
-assertArraysEqual(testArray, ["Joe", "George", "Mike", "Amahd"]);
+describe('#middle', () => {
+
+  it('should return [] for [1]', () => {
+    assert.deepEqual(middle([1]), []);
+  });
+
+  it('should return [] for [1, 2]', () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+  it('should return [2] for [1, 2, 3]', () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+
+  it('should return [2, 3] for [1, 2, 3, 4]', () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+  });
+
+  it('should return [\"George", "Mike"] for ["Joe", "George", "Mike", "Amahd"]', () => {
+    assert.deepEqual(middle(["Joe", "George", "Mike", "Amahd"]), ["George", "Mike"]);
+  });
+
+  it('should not change the original array of [\"Joe", "George", "Mike", "Amahd"]', () => {
+    const testArray = ["Joe", "George", "Mike", "Amahd"];
+    middle(testArray);
+    assert.deepEqual(testArray, ["Joe", "George", "Mike", "Amahd"]);
+  })
+});
