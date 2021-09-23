@@ -1,12 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    //console.log("✅✅✅ " + "Assertion Passed: " + actual + " === " + expected);
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    //console.log("❌❌❌ " + "Assertion Failed: " + actual + " !== " + expected);
-    console.log(`❌❌❌ Assertion Failed: ${actual} != ${expected}`);
-  }
-};
 
 //all items: an array of strings that we need to look through
 //itemsToCount: and object speficying what to count
